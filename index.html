@@ -65,7 +65,7 @@ function dialupSound(){
 function boot(){
  screen.innerHTML='<section class="boot"><div><div style="font-size:48px">▣</div><h1>RETROMICRO</h1><p>Connecting to your own little world...</p><div class="bootline"><span></span></div><div class="bootnote">Dialing in · Loading your desktop · Please wait...</div></div></section>';
  dialupSound();
- setTimeout(()=>{screen.innerHTML=topbar('Ready')+'<section class="panel"><div class="panelbody"><div class="eyebrow">SETUP COMPLETE</div><h1 class="hero">Your desktop is ready, '+escapeHtml(state.username)+'!</h1><p class="muted">Your RetroMicro computer has finished starting up. The full interactive desktop is the next piece we'll build.</p><div class="actions"><span></span><button class="btn" id="enter">Enter My Desktop →</button></div></div></section>';document.getElementById('enter').onclick=desktop},7200);
+ setTimeout(desktop,7200);
 }
 function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function desktop(){
